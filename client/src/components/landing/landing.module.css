@@ -1,0 +1,40 @@
+.landingPage {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingPage {
+  background-image: url(https://fondosmil.com/fondo/14707.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.landingTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px #000000;
+}
+
+.btonHome {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  box-shadow: 2px 2px #000000;
+
+}
+
+.btonHome:hover {
+  background-color: #388e3c;
+}

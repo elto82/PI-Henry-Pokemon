@@ -1,0 +1,39 @@
+.paginado {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+
+}
+
+.paginado li {
+  margin: 0 10px;
+
+}
+
+.a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d5af1;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.a:hover {
+  background-color: #2d3faa;
+  cursor: pointer;
+
+}
+
+.a.active {
+  background-color: #232e6e;
+  border: 1px solid yellow;
+
+}

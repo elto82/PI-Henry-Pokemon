@@ -1,0 +1,106 @@
+.homeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  text-shadow: 1px 1px #000, -1px -1px #000;
+}
+
+.homeContainer {
+  background-image: url(https://fondosmil.com/fondo/14759.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.navegate {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+
+}
+
+.navegate:hover {
+  background-color: #388e3c;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.selectOrden,
+.selectType {
+  font-size: 1rem;
+  padding: 5px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.btonReload {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btonReload:hover {
+  background-color: #388e3c;
+}
+
+.containerCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 30px;
+
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .containerCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .containerCards {
+    grid-template-columns: 1fr;
+  }
+}
