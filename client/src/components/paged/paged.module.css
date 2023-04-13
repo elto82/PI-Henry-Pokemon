@@ -1,39 +1,41 @@
 .paginado {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   margin-top: 20px;
-
+  flex-wrap: wrap;
 }
 
 .paginado li {
-  margin: 0 10px;
+  margin: 0 5px;
 
 }
 
 .a {
+  font-size: 14px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  border-radius: 16px;
+  width: 5vw;
+  height: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #3d5af1;
   transition: all 0.2s ease-in-out;
-
+  margin-top: 4px;
 }
 
 .a:hover {
   background-color: #2d3faa;
   cursor: pointer;
-
+  text-shadow: 1px 1px #000, -1px -1px #000;
+  font-size: 7px;
 }
 
 .a.active {
   background-color: #232e6e;
   border: 1px solid yellow;
-
 }

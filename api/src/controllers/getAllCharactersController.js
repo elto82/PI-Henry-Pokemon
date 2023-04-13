@@ -6,7 +6,7 @@ const getApiData = async () => {
   const pokemons = [];
   let url = "https://pokeapi.co/api/v2/pokemon";
   let count = 0;
-  let numberPages = 1;
+  let numberPages = 2;
 
   try {
     while (url && count < numberPages) {
