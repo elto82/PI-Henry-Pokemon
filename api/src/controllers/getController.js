@@ -6,8 +6,8 @@ const getAllPokemon = async (req, res) => {
     const allPokemon = await getAllData();
 
     if (name) {
-      const filteredPokemon = allPokemon.filter((pokemon) =>
-        pokemon.name.toLowerCase().includes(name.toLowerCase())
+      const filteredPokemon = allPokemon.filter(
+        (pokemon) => pokemon.name.toLowerCase() === name.toLowerCase()
       );
 
       filteredPokemon.length
