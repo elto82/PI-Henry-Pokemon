@@ -87,6 +87,7 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         characters: [...state.characters, action.payload],
+        allCharacters: [...state.allCharacters, action.payload],
       };
 
     case FILTER_BY_TYPES:
