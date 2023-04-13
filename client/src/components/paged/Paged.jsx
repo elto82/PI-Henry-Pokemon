@@ -14,24 +14,53 @@ const Paged = ({ charactersPerPage, allCharacters, paginado }) => {
     paginado(number);
   };
 
+  const handlePrevClick = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      paginado(currentPage - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (currentPage < pageNumbers.length) {
+      setCurrentPage(currentPage + 1);
+      paginado(currentPage + 1);
+    }
+  };
+
   return (
     <nav>
       <ul className={style.paginado}>
-        {pageNumbers &&
-          pageNumbers.map((number) => (
-            <li className={style.number} key={number}>
-              <button
-                className={
-                  currentPage === number
-                    ? `${style.a} ${style.active}`
-                    : style.a
-                }
-                onClick={() => handleClick(number)}
-              >
-                {number}
-              </button>
-            </li>
-          ))}
+        <li>
+          <button
+            className={style.a}
+            onClick={handlePrevClick}
+            disabled={currentPage === 1}
+          >
+            Prev
+          </button>
+        </li>
+        {pageNumbers.map((number) => (
+          <li className={style.number} key={number}>
+            <button
+              className={
+                currentPage === number ? `${style.a} ${style.active}` : style.a
+              }
+              onClick={() => handleClick(number)}
+            >
+              {number}
+            </button>
+          </li>
+        ))}
+        <li>
+          <button
+            className={style.a}
+            onClick={handleNextClick}
+            disabled={currentPage === pageNumbers.length}
+          >
+            Next
+          </button>
+        </li>
       </ul>
     </nav>
   );

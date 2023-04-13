@@ -41,10 +41,15 @@ const Create = () => {
   };
 
   const handleSelectType = (e) => {
-    setInput({
-      ...input,
-      types: [...input.types, e.target.value],
-    });
+    const selectedType = e.target.value;
+    setInput((prevInput) => ({
+      ...prevInput,
+      types: [...prevInput.types, selectedType],
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      types: "",
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -80,10 +85,9 @@ const Create = () => {
     if (input.image === "") {
       errors.image = "Image URL is required";
     }
-    if (!input.types || input.types.length === 0) {
+    if (input.types) {
       errors.types = "At least one type is required";
     }
-
     return errors;
   };
 
@@ -213,15 +217,18 @@ const Create = () => {
           <input
             className={style.inputForm}
             type={"text"}
-            value={input.types}
+            value={input.types.join(", ")}
             name="types"
             readOnly={true}
             onChange={handleChange}
           />
           {errors.types && <p className={style.errorForm}>{errors.types}</p>}
         </div>
-        <label className={style.labelForm}>Select types</label>
+
         <select className={style.selectForm} onChange={handleSelectType}>
+          <option className={style.optionForm} value="">
+            Select type
+          </option>{" "}
           {types.map((type, index) => (
             <option className={style.optionForm} key={index} value={type.name}>
               {type.name}
