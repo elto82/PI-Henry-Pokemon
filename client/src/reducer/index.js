@@ -40,7 +40,7 @@ function rootReducer(state = initialState, action) {
     case ORDER_BY_NAME:
       let sortedArr =
         action.payload === "asc"
-          ? state.characters.sort(function (a, b) {
+          ? state.allCharacters.sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;
               }
@@ -49,7 +49,7 @@ function rootReducer(state = initialState, action) {
               }
               return 0;
             })
-          : state.characters.sort(function (a, b) {
+          : state.allCharacters.sort(function (a, b) {
               if (a.name > b.name) {
                 return -1;
               }
@@ -60,7 +60,7 @@ function rootReducer(state = initialState, action) {
             });
       return {
         ...state,
-        characters: sortedArr,
+        allCharacters: sortedArr,
       };
 
     case ORDER_BY_ATTACK:
