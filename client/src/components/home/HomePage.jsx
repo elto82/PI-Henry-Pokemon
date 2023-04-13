@@ -103,6 +103,9 @@ const HomePage = () => {
         </select>
 
         <select className={style.selectOrden} onChange={handleSelectType}>
+          <option className={style.optionForm} value="">
+            Filter by type
+          </option>{" "}
           {types.map((type, index) => (
             <option className={style.optionForm} key={index} value={type.name}>
               {type.name}
