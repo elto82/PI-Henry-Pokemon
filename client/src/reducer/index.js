@@ -60,6 +60,7 @@ function rootReducer(state = initialState, action) {
             });
       return {
         ...state,
+        characters: sortedArr,
         allCharacters: sortedArr,
       };
 
