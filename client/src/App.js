@@ -8,7 +8,7 @@ import Detail from "./components/detail/Detail";
 import Modal from "react-modal";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://deploy-production-d3a9.up.railway.app/";
+axios.defaults.baseURL = "pi-henry-pokemon-production.up.railway.app/";
 
 Modal.setAppElement("#root");
 
